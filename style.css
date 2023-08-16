@@ -1,0 +1,53 @@
+@import url('https://fonts.googleapis.com/css2?family=Foldit&family=Nanum+Gothic&family=Roboto:wght@400;700&family=Shadows+Into+Light&family=Smokum&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    overflow: hidden;
+    margin: 0;
+    background: linear-gradient(to bottom, #666666, #000000);
+}
+
+img {
+    width: 250px;
+}
+
+.book {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 600px;
+}
+
+.quote {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 600px;
+}
+
+#naked-quote-display {
+    color: black;
+    padding: 20px; /* Add some padding to the quote display */
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.title {
+    font-family: 'Roboto', sans-serif;
+    font-size: 48px;
+    text-align: center;
+    margin-bottom: 20px; /* Add some space below the title */
+}
