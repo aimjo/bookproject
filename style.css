@@ -13,7 +13,7 @@ body {
     height: 100vh;
     overflow: hidden;
     margin: 0;
-    background: linear-gradient(to bottom, #666666, #000000);
+    background: linear-gradient(to bottom, #fdc5c5, #752f2f);
 }
 
 img {
@@ -34,10 +34,12 @@ img {
     width: 600px;
 }
 
-#naked-quote-display {
-    color: black;
-    padding: 20px; /* Add some padding to the quote display */
+#naked-quote-display,
+#quote-display {
+    color: rgb(0, 0, 0); /* Change this color to the desired font color */
+    padding: 20px;
 }
+
 
 .container {
     display: flex;
