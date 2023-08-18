@@ -11,7 +11,6 @@ body {
     align-items: center;
     justify-content: center;
     height: 100vh;
-    overflow: hidden;
     margin: 0;
     background: linear-gradient(to bottom, #fdc5c5, #752f2f);
 }
