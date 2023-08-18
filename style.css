@@ -13,10 +13,26 @@ body {
     height: 100vh;
     margin: 0;
     background: linear-gradient(to bottom, #fdc5c5, #752f2f);
+    background-attachment: fixed;
 }
 
 img {
     width: 250px;
+}
+
+.title {
+    font-family: 'Roboto', sans-serif;
+    font-size: 48px;
+    text-align: center;
+    margin-bottom: 20px; /* Add some space below the title */
+}
+
+.container {
+    /* display: flex;
+    align-items: center;
+    justify-content: center; */
+    background-color: rgba(0, 0, 0, 0.3); /* Use rgba for semi-transparent background */
+    padding: 20px;
 }
 
 .book {
@@ -37,19 +53,4 @@ img {
 #quote-display {
     color: rgb(0, 0, 0); /* Change this color to the desired font color */
     padding: 20px;
-}
-
-.container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: rgba(0, 0, 0, 0.3); /* Use rgba for semi-transparent background */
-    padding: 20px;
-}
-
-.title {
-    font-family: 'Roboto', sans-serif;
-    font-size: 48px;
-    text-align: center;
-    margin-bottom: 20px; /* Add some space below the title */
 }
