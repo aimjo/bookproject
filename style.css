@@ -20,19 +20,76 @@ img {
     width: 250px;
 }
 
-.title {
-    font-family: 'Roboto', sans-serif;
-    font-size: 48px;
-    text-align: center;
-    margin-bottom: 20px; /* Add some space below the title */
+.slideshow-container {
+    max-width: 1000px;
+    position: relative;
+    margin: auto;
+  }  
+
+/* Make the images invisible by default */
+.containers {
+    display: none;
+  }
+
+  /* forward & Back buttons */
+.Back, .forward {
+    cursor: pointer;
+    position: absolute;
+    top: 48%;
+    width: auto;
+    margin-top: -23px;
+    padding: 17px;
+    color: grey;
+    font-weight: bold;
+    font-size: 19px;
+    transition: 0.4s ease;
+    border-radius: 0 5px 5px 0;
+    user-select: none;
 }
 
-.container {
-    /* display: flex;
-    align-items: center;
-    justify-content: center; */
-    background-color: rgba(0, 0, 0, 0.3); /* Use rgba for semi-transparent background */
-    padding: 20px;
+/* Place the "forward button" to the right */
+.forward {
+    right: 0;
+    border-radius: 4px 0 0 4px;
+}
+
+/*when the user hovers,add a black background with some little opacity */
+.Back:hover, .forward:hover {
+    background-color: rgba(0,0,0,0.8);
+}
+
+/* The circles or bullets and indicators */
+.dots {
+    cursor: pointer;
+    height: 16px;
+    width: 16px;
+    margin: 0 3px;
+    background-color: #acc;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.5s ease;
+}
+
+.enable, .dots:hover {
+    background-color: #717161;
+}
+
+/* Faint animation */
+.fade {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1.4s;
+    animation-name: fade;
+    animation-duration: 1.4s;
+}
+
+@-webkit-keyframes fade {
+    from {opacity: .5}
+    to {opacity: 2}
+}
+  
+@keyframes fade {
+    from {opacity: .5}
+    to {opacity: 2}
 }
 
 .book {
