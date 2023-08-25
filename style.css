@@ -12,7 +12,7 @@ body {
     justify-content: center;
     height: 100vh;
     margin: 0;
-    background: linear-gradient(to bottom, #fdc5c5, #752f2f);
+    background: linear-gradient(to bottom, #b297f1, #752f2f);
     background-attachment: fixed;
 }
 
@@ -32,29 +32,35 @@ img {
   }
 
   /* forward & Back buttons */
-.Back, .forward {
+.arrow {
     cursor: pointer;
     position: absolute;
-    top: 48%;
-    width: auto;
-    margin-top: -23px;
-    padding: 17px;
-    color: grey;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 40px;
+    height: 40px;
+    padding: 10px;
+    color: white;
     font-weight: bold;
-    font-size: 19px;
-    transition: 0.4s ease;
-    border-radius: 0 5px 5px 0;
-    user-select: none;
+    font-size: 24px;
+    background-color: rgba(0, 0, 0, 0.3);
+    border-radius: 50%;
+    text-align: center;
+    line-height: 1.2;
+    transition: background-color 0.3s ease;
 }
 
 /* Place the "forward button" to the right */
-.forward {
+.arrow.forward {
     right: 0;
-    border-radius: 4px 0 0 4px;
+}
+
+.arrow.back {
+    left: 0;
 }
 
 /*when the user hovers,add a black background with some little opacity */
-.Back:hover, .forward:hover {
+.arrow:hover {
     background-color: rgba(0,0,0,0.8);
 }
 

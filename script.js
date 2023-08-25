@@ -17,17 +17,21 @@ function newQuote(quotesArray) {
     return quotesArray[randomQuote];
 }
 
-document.getElementById("naked-btn").addEventListener("click", function () {
-    const quote = newQuote(nakedQuotes);
-    document.getElementById('naked-quote-display').innerHTML = quote;
-});
+// Set an initial quote for both displays
+document.getElementById('naked-quote-display').innerHTML = newQuote(nakedQuotes);
+document.getElementById('glory-quote-display').innerHTML = newQuote(gloryQuotes);
 
-document.getElementById("glory-btn").addEventListener("click", function () {
-    const quote = newQuote(gloryQuotes);
-    document.getElementById('glory-quote-display').innerHTML = quote;
-});
+// Function to update quotes every 30 seconds
+function updateQuotes() {
+    document.getElementById('naked-quote-display').innerHTML = newQuote(nakedQuotes);
+    document.getElementById('glory-quote-display').innerHTML = newQuote(gloryQuotes);
+}
 
-var slidePosition = 1;
+// Call updateQuotes initially and then every 30 seconds
+updateQuotes();
+setInterval(updateQuotes, 15000); // 15 seconds
+
+let slidePosition = 1;
 SlideShow(slidePosition);
 
 // forward/Back controls
@@ -41,9 +45,9 @@ function currentSlide(n) {
 }
 
 function SlideShow(n) {
-  var i;
-  var slides = document.getElementsByClassName("container");
-  var circles = document.getElementsByClassName("dots");
+  let i;
+  let slides = document.getElementsByClassName("container");
+  let circles = document.getElementsByClassName("dots");
   if (n > slides.length) {slidePosition = 1}
   if (n < 1) {slidePosition = slides.length}
   for (i = 0; i < slides.length; i++) {
