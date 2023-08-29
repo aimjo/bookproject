@@ -12,40 +12,19 @@ const gloryQuotes = [
     "“We may be able to filter out certain undesirable tendencies through genetics, chemical treatments, beta scans, we deter with penal colonies and the absence of freedom. But human nature remains human nature.” <br>“Those basic motives for violence that science is unable to filter: love, hate, greed, envy, anger.” “They separate us from the droids, don’t they?” <br>“And make us susceptible to joy, sorrow, and passion. That’s a debate for the scientists and the intellectuals.” "
 ]
 
-const immortalQuotes = [
-  "“Neither of them knew what it was to be family, to have family, to make a family. They knew cruelty, abuse, abandonment. She wondered if that was why they had come together. They both understood what it was to have nothing, to know fear and hunger and despair- and both had remade themselves.”",
-  "“If we do, I want to be the bad cop.” <br>“You’re a lousy bad cop, Feeney. Face it.” <br>He gave her a mournful look. “I outrank you, Dallas.” <br>“I’m primary, and I’m better at bad cop. Live with it.” <br>“I always have to be the good cop,” he muttered as they stepped into a well-lighted hallway with more marble, more gilt.”",
-  "“I thought it was 'innocent until proven guilty'.” <br> “That's just one of the bigger lies we live by.”",
-  "“In a few weeks she wouldn’t just be Eve Dallas, lieutenant, homicide. She’d be Roarke’s wife. How she would manage to be both was more of a mystery to her than any case that had ever come across her desk.”",
-  "“Because death’s an insult anytime. When somebody hurries it along, that’s the biggest insult of all.”"
-]
-
-const raptureQuotes = [
-  "“I'm still picking pockets--I just do it as legally as I can. Being married to a cop limits certain activities.”",
-  "“Goddamn Summerset. I've told him to leave my car when I park it.” <br>“I think he did.” Peabody flipped on her sunshades, pointed. “It's blocking the drive, see?” <br>“Oh, yeah.” Eve cleared her throat. The car was just as she'd left it, and fluttering in the mild breeze were a few torn articles of clothing. “Don't ask,” she muttered and started to hoof it down the drive. <br>“I wasn't going to.” Peabody's voice was smooth as silk, “Speculation's more interesting.” ",
-  "“Three weeks hadn't changed Cop Central. The coffee was still poisonous, the noise abominable, and the view out of her stingy window was still miserable. She was thrilled to be back.” ",
-  "“The mind, and the unconscious mind in particular, is a canvas. We paint on it constantly. Art and music can add such colors, such style.”",
-  "“What do you mean SOS?” <br>“Same old shit, Dickie. It’s always SOS with you.”",
-  "“You did good today. I won't have to think twice going through the door with you.” As Eve walked away, Peabody gaped after her. It had been simply, even casually said, but it was the finest professional compliment she'd ever been given.” "
-]
-
 function newQuote(quotesArray) {
     let randomQuote = Math.floor(Math.random() * quotesArray.length);
     return quotesArray[randomQuote];
 }
 
-// Set an initial quote for displays
+// Set an initial quote for both displays
 document.getElementById('naked-quote-display').innerHTML = newQuote(nakedQuotes);
 document.getElementById('glory-quote-display').innerHTML = newQuote(gloryQuotes);
-document.getElementById('immortal-quote-display').innerHTML = newQuote(immortalQuotes);
-document.getElementById('rapture-quote-display').innerHTML = newQuote(raptureQuotes);
 
 // Function to update quotes every 30 seconds
 function updateQuotes() {
     document.getElementById('naked-quote-display').innerHTML = newQuote(nakedQuotes);
     document.getElementById('glory-quote-display').innerHTML = newQuote(gloryQuotes);
-    document.getElementById('immortal-quote-display').innerHTML = newQuote(immortalQuotes);
-    document.getElementById('rapture-quote-display').innerHTML = newQuote(raptureQuotes);
 }
 
 // Call updateQuotes initially and then every 30 seconds
