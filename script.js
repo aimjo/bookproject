@@ -55,6 +55,10 @@ setInterval(updateQuotes, 15000); // 15 seconds
 let slidePosition = 1;
 SlideShow(slidePosition);
 
+setInterval(function() {
+  plusSlides(1); // Move to the next slide
+}, 10000);
+
 // forward/Back controls
 function plusSlides(n) {
 SlideShow(slidePosition += n);
@@ -66,17 +70,23 @@ SlideShow(slidePosition = n);
 }
 
 function SlideShow(n) {
-let i;
-let slides = document.getElementsByClassName("container");
-let circles = document.getElementsByClassName("dots");
-if (n > slides.length) {slidePosition = 1}
-if (n < 1) {slidePosition = slides.length}
-for (i = 0; i < slides.length; i++) {
-    slides[i].style.display = "none";
+  let i;
+  let slides = document.getElementsByClassName("container");
+  let circles = document.getElementsByClassName("dots");
+  if (n > slides.length) {
+      slidePosition = 1;
+  }
+  if (n < 1) {
+      slidePosition = slides.length;
+  }
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+      slides[i].classList.remove("fade-in"); // Remove the fade-in class from all slides
+  }
+  for (i = 0; i < circles.length; i++) {
+      circles[i].className = circles[i].className.replace(" enable", "");
+  }
+  slides[slidePosition - 1].style.display = "block";
+  slides[slidePosition - 1].classList.add("fade-in"); // Add the fade-in class to the current slide
+  circles[slidePosition - 1].className += " enable";
 }
-for (i = 0; i < circles.length; i++) {
-    circles[i].className = circles[i].className.replace(" enable", "");
-}
-slides[slidePosition-1].style.display = "block";
-circles[slidePosition-1].className += " enable";
-} 

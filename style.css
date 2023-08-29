@@ -130,3 +130,16 @@ img {
   color: rgb(0, 0, 0); /* Change this color to the desired font color */
   padding: 20px;
 }
+
+.fade-in {
+  animation: fade-in 3s ease-in-out;
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
